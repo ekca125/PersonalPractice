@@ -7,7 +7,7 @@
 <title>gugu1</title>
 <style>
 	table {border-collapse:collapse;}
-	td {border:1px solid gray; padding:5px;}
+	td {border:1px solid gray;}
 </style>
 </head>
 <body>
