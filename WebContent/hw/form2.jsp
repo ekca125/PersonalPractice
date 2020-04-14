@@ -11,6 +11,7 @@
 </style>
 </head>
 <body>
+<% request.setCharacterEncoding("utf-8"); %>
 <%
 	String numberText=request.getParameter("numberTextCmd");
 	if(numberText==null){

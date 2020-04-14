@@ -8,6 +8,7 @@
 <style type="text/css">
 </style>
 </head>
+<% request.setCharacterEncoding("utf-8"); %>
 <%
 	String numberText=request.getParameter("numberText");
 	int numberInt = (numberText == null) ? 0 : Integer.parseInt(numberText)+1;
