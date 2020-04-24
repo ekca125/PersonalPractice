@@ -9,7 +9,7 @@ List<User> userList = UserDAO.findAll();
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <style>
     div.container { width: 600px; margin: 50px auto; }
-    thead th { background-color: #eee; font-wight:bold;}
+    thead th { background-color: #eee;}
     table{ border-collapse: collapse; width: 100%; }
     td, th { padding: 4px; border: 1px solid lightgray; }
     td:nth-child(4) { text-align: center; }
