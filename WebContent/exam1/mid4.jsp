@@ -24,6 +24,7 @@ label {
 button {
 	width: 100px;
 }
+div.error { margin: 10px; padding: 10px 20px; background-color: #fdd; border: 1px solid #faa; }
 </style>
 </head>
 <%
@@ -62,8 +63,9 @@ button {
 		<p></p>
 		<button type="submit" value=Ok>회원 등록</button>
 	</form>
-
-	<p><%= errorText%></p>	
+	<%if(errorText!=""){ %>
+	<div class="error"><p><%= errorText%></p></div>
+		<%} %>
 	
 	<table>
 		<tr>

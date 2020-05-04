@@ -6,12 +6,11 @@
 <meta charset="UTF-8">
 <title>mid3</title>
 <style type="text/css">
-input ,select{
+select{
 	display :block;
 	margin: 10px;
 	height: 25px;
 }
-
 
 button {
 	display : block;
