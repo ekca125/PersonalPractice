@@ -7,13 +7,12 @@
 <title>mid2.jsp 구현</title>
 <style type="text/css">
 input, button {
-	display: block;
 	margin: 10px;
 	height: 25px;
 }
 
-
 button {
+	display: none;
 	width: 100px;
 }
 </style>
@@ -32,6 +31,7 @@ button {
 		String three_selected = "three".equals(numberText) ? "checked" : "";
 	%>
 	<form>
+		<div id="radioDiv">
 		<label><input type="radio" name="number" value="one"
 			<%=one_selected%>>one</label> 
 			
@@ -40,7 +40,8 @@ button {
 			
 			<label><input
 			type="radio" name="number" value="three" <%=three_selected%>>three</label>
-
+		</div>
+		
 		<input type="text" name="numberText" value=<%=numberText%> />
 		<button type="submit" value=Ok>Ok</button>
 	</form>
