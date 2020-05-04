@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mid2.jsp 구현</title>
+<title>mid2</title>
 <style type="text/css">
 input, button {
 	margin: 10px;
@@ -12,7 +12,7 @@ input, button {
 }
 
 button {
-	display: none;
+	display: block;
 	width: 100px;
 }
 </style>

@@ -4,18 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mid2.jsp 구현</title>
+<title>mid3</title>
 <style type="text/css">
-input, button {
-	display: block;
+input ,select{
+	display :block;
 	margin: 10px;
 	height: 25px;
 }
 
 
 button {
+	display : block;
 	width: 100px;
 }
+
+button {
+	display: block;
+	width: 100px;
+}
+
 </style>
 </head>
 <body>

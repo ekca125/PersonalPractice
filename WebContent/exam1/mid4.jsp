@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>mid4</title>
 <style type="text/css">
 table {
 	border-collapse: collapse;
@@ -13,6 +13,7 @@ table {
 }
 
 td {
+	width : 200px;
 	border: 1px solid gray;
 }
 
@@ -49,19 +50,20 @@ button {
 	
 %>
 <body>
+	<h3>회원 등록</h3>
+
 	<form>
 		<label>이름</label> 
 		<input type="text" name="nameText" value=<%=nameText%>>
-		
+		<p></p>
 		<label>성별</label> 
 		<label><input type="radio" name="genderText" value="남자" <%= male_selected%>>남자</label> 
 		<label><input type="radio" name="genderText" value="여자" <%= female_selected%>>여자</label>
+		<p></p>
 		<button type="submit" value=Ok>회원 등록</button>
-		
 	</form>
 
-	<p><%= errorText%></p>
-	
+	<p><%= errorText%></p>	
 	
 	<table>
 		<tr>
