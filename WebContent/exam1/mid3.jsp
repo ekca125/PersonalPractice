@@ -30,6 +30,10 @@ button {
 		String one_selected = "one".equals(numberText) ? "checked" : "";
 		String two_selected = "two".equals(numberText) ? "checked" : "";
 		String three_selected = "three".equals(numberText) ? "checked" : "";
+		
+		String one_selected2="one".equals(numberText)?"selected":"";
+		String two_selected2="two".equals(numberText)?"selected":"";
+		String three_selected2="three".equals(numberText)?"selected":"";
 	%>
 	<form>
 		<label><input type="radio" name="number" value="one"
@@ -40,7 +44,13 @@ button {
 			
 			<label><input
 			type="radio" name="number" value="three" <%=three_selected%>>three</label>
-
+	
+		<select name="numberText2">
+              <option value="one" <%= one_selected2%> >one</option>
+              <option value="two" <%= two_selected2%> >two</option>
+              <option value="three" <%= three_selected2%> >three</option>
+         	</select>
+	
 		<input type="text" name="numberText" value=<%=numberText%> />
 		<button type="submit" value=Ok>Ok</button>
 	</form>
