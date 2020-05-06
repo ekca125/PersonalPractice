@@ -1,9 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.List, jsp_hw.jdbc1.*, jsp_hw.exam2.*"%>
+
+<% request.setCharacterEncoding("utf-8"); %>
 <%
-List<Book> bookList = BookDAO.findAll();
+	String bookText=request.getParameter("bookText");
+	String authorName;
+	if(bookText==null){
+		authorName="%";
+		//전체조회
+	}
+	else{
+		authorName=bookText;
+	}
+	List<Book> bookList = BookDAO.findByAuthor(authorName);	
 %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,21 +45,20 @@ td, th {
 td:nth-child(4) {
 	text-align: center;
 }
+
 div.searchTab {
 	display: inline-block;
 }
-
 </style>
 </head>
 <body>
 	<div class="container">
 
 		<h1>책목록</h1>
-	
+
 		<form action="bookList2.jsp">
-			<span>저자</span>
-			<input type="text" name="bookText" placeholder="검색조건" />
-			<button type="submit" value = searchGo>조회</button>
+			<span>저자</span> <input type="text" name="bookText" placeholder="검색조건" />
+			<button type="submit" value=searchGo>조회</button>
 		</form>
 		<p></p>
 
