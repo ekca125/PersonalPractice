@@ -46,16 +46,18 @@ td:nth-child(4) {
 	text-align: center;
 }
 
-div.searchTab {
-	display: inline-block;
+button {
+	margin-left: 15px;
+	width:90px;
 }
+
 </style>
 </head>
 <body>
 	<div class="container">
 
 		<h1>책목록</h1>
-
+		<p></p>
 		<form action="bookList2.jsp">
 			<span>저자</span> <input type="text" name="bookText" placeholder="검색조건" />
 			<button type="submit" value=searchGo>조회</button>
