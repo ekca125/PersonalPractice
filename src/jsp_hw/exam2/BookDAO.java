@@ -16,7 +16,8 @@ public class BookDAO {
 		bookData.setAuthor(resultSet.getString("author"));
 		bookData.setCategoryId(resultSet.getInt("categoryId"));
 		bookData.setPrice(resultSet.getInt("price"));
-		bookData.setPublisher(resultSet.);
+		bookData.setPublisher(resultSet.getString("publisher"));
+		bookData.setCategoryName(resultSet.getString("categoryName"));
 
 		return bookData;
 	}
@@ -36,6 +37,27 @@ public class BookDAO {
             	 resultList.add(getUserFrom(resultSet));
             }
             return resultList;
+        }
+    }
+
+	public static List<Book> findByAuthor() throws Exception {
+		String sql = "SELECT book.* ,category.categoryName "
+				+ "FROM book LEFT JOIN "
+				+ "category ON book.categoryId=category.id "
+				+ "WHERE book.author LIKE ?";
+
+        try (Connection connection = DB.getConnection("book");
+             PreparedStatement statement = connection.prepareStatement(sql);
+        		PreparedStatement statement = connection.prepareStatement(sql){
+        				try(
+             ResultSet resultSet = statement.executeQuery()) {
+
+            ArrayList<Book> resultList = new ArrayList<Book>();
+            while (resultSet.next()) {
+            	 resultList.add(getUserFrom(resultSet));
+            }
+            return resultList;
+        				}
         }
     }
 }
